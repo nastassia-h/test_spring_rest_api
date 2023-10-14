@@ -9,17 +9,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entity.ToDoEntity;
+import com.example.demo.entity.Todo;
 import com.example.demo.service.ToDoService;
 
 @RestController
 @RequestMapping("/todos")
-public class ToDoController {
+public class TodoController {
    @Autowired
    private ToDoService todoService;
 
    @PostMapping
-   public ResponseEntity createTodo(@RequestBody ToDoEntity todo,
+   public ResponseEntity createTodo(@RequestBody Todo todo,
          @RequestParam Long userId) {
       try {
          return ResponseEntity.ok(todoService.createTodo(todo, userId));

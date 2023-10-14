@@ -2,8 +2,8 @@ package com.example.demo.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.example.demo.entity.ToDoEntity;
+import com.example.demo.entity.Todo;
 
-public interface ToDoRepository extends CrudRepository<ToDoEntity, Long> {
+public interface TodoRepository extends CrudRepository<Todo, Long> {
 
 }

@@ -1,10 +1,12 @@
 package com.example.demo.repository;
 
+import java.util.Optional;
+
 import org.springframework.data.repository.CrudRepository;
 
-import com.example.demo.entity.UserEntity;
+import com.example.demo.entity.User;
 
-public interface UserRepository extends CrudRepository<UserEntity, Long> {
+public interface UserRepository extends CrudRepository<User, Long> {
 
-   UserEntity findByUsername(String username);
+   Optional<User> findByUsername(String username);
 }
